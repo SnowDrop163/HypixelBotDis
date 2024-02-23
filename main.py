@@ -228,7 +228,7 @@ class MasterModeView(View):
 
 class AcceptDeclineView(View):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs, timeout=None)
+        super().__init__(*args, **kwargs, timeout=360)
 
     @discord.ui.button(label="Продолжить", style=discord.ButtonStyle.green, custom_id="accept_verification")
     async def accept_button(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -244,7 +244,7 @@ class AcceptDeclineView(View):
 
 class RequestRoleView(View):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs, timeout=None)
+        super().__init__(*args, **kwargs, timeout=360)
     @discord.ui.button(label="Ввести ник", style=discord.ButtonStyle.green, custom_id="enter_nickname_for_rank")
     async def enter_nick_for_rank_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         try:
@@ -254,7 +254,7 @@ class RequestRoleView(View):
 
 class EnterNickView(View):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs, timeout=None)
+        super().__init__(*args, **kwargs, timeout=360)
     @discord.ui.button(label="Ввести ник", style=discord.ButtonStyle.green, custom_id="enter_nickname")
     async def enter_nick_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         try:
