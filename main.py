@@ -12,7 +12,7 @@ import itertools
 import math
 import random
 
-youtube_dl.utils.bug_reports_message = lambda: '' #Удаление не нужных ошибок
+youtube_dl.utils.bug_reports_message = lambda: '' #Удаление не нужных ошибок от библиотеки
 
 
 class VoiceError(Exception):
